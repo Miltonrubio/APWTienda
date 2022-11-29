@@ -17,8 +17,8 @@ importScripts(
     "style.css.map",
     "style.scss",
     "js/jquery-3.5.1.min.js",
-    "node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "node_modules/@popperjs/core/dist/umd/popper.min.js ",
+    "modu/bootstrap/dist/css/bootstrap.min.css",
+    "modu/@popperjs/core/dist/umd/popper.min.js ",
     "icons/512.png",
     "img/a.jpg",
     "img/dino.gif",
@@ -35,7 +35,7 @@ importScripts(
     "icons/167.png",
     "img/prenda2.jpg",
     "img/prenda3.jpg",
-    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "
+    "modu/bootstrap/dist/js/bootstrap.bundle.min.js "
   ]);
   
   workbox.routing.registerRoute(
