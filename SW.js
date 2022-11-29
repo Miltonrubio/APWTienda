@@ -1,19 +1,53 @@
 importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
-);
-
-workbox.precaching.precacheAndRoute([
-    'index.html',
-    'offline.html',
+    "https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js"
+  );
+  
+  workbox.precaching.precacheAndRoute([
+    "index.html",
+    "contacto.html",
+    "offline.html",    
     'promociones.html',
-    'contacto.html',
+    "app.js",
+    "sw.js",
+    "manifest.webmanifest",
     'img/offline.jpg',
-]);
-
+    "css/style.css",
+    "css/normalize.css",
+    "style.css",
+    "style.css.map",
+    "style.scss",
+    "js/jquery-3.5.1.min.js",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/@popperjs/core/dist/umd/popper.min.js ",
+    "icons/512.png",
+    "img/a.jpg",
+    "img/dino.gif",
+    "img/dino.jpg",
+    "img/gato.jpg",
+    "img/loki.jpg",
+    "img/maid.jpg",
+    "img/rei.gif",
+    "icons/100.png",
+    "icons/167.png",
+    "img/prenda2.jpg",
+    "img/prenda3.jpg",
+    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js "
+  ]);
+  
+  workbox.routing.registerRoute(
+    ({request}) => request.destination === "document",
+    new workbox.strategies.NetworkFirst()
+  );
+/*
 workbox.routing.registerRoute(
     ({request}) => request.destination === 'image',
     new workbox.strategies.NetworkOnly()
     );
+
+
+*/
+
+
 
     /*
     workbox.routing.registerRoute(
@@ -24,7 +58,7 @@ workbox.routing.registerRoute(
     workbox.routing.registerRoute(
         ({request}) => request.destination === 'document',
         new workbox.strategies.CacheOnly()
-    ); */
+    ); 
     workbox.routing.registerRoute(
         ({request}) => request.destination === 'document',
         new workbox.strategies.NetworkFirst()
