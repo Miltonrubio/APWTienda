@@ -9,7 +9,15 @@
   <script src="modu/bootstrap/dist/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miti Endita</title>
-
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "6e5fe5f8-f042-4ba8-8aa5-30874fadc2f4",
+      });
+    });
+  </script>
   <script src="app.js"></script>
 </head>
 
